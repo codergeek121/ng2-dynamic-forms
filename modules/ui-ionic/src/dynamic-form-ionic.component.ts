@@ -30,6 +30,7 @@ import {
     DYNAMIC_FORM_CONTROL_TYPE_TEXTAREA,
     DYNAMIC_FORM_CONTROL_TYPE_TIMEPICKER
 } from "@ng2-dynamic-forms/core";
+import { DYNAMIC_FORM_CONTROL_INPUT_TYPE_FILE } from "../../core/src/model/input/dynamic-input.model";
 
 export const enum IonicFormControlType {
 
@@ -43,6 +44,7 @@ export const enum IonicFormControlType {
     Select = 8, //"SELECT",
     TextArea = 9, //"TEXTAREA",
     Toggle = 10, //"TOGGLE"
+    File = 11, //"FILE"
 }
 
 @Component({
@@ -73,6 +75,7 @@ export class DynamicFormIonicComponent extends DynamicFormControlComponent imple
     @ViewChild(Range) ionRange: Range | undefined;
     @ViewChild(Select) ionSelect: Select | undefined;
     @ViewChild(Toggle) ionToggle: Toggle | undefined;
+    @ViewChild(File) ionFile: File | undefined;
 
     type: IonicFormControlType | undefined;
 
@@ -124,6 +127,8 @@ export class DynamicFormIonicComponent extends DynamicFormControlComponent imple
             case DYNAMIC_FORM_CONTROL_TYPE_TEXTAREA:
                 return IonicFormControlType.TextArea;
 
+            case DYNAMIC_FORM_CONTROL_INPUT_TYPE_FILE:
+                return IonicFormControlType.File;
             default:
                 return null;
         }

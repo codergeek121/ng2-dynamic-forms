@@ -42,7 +42,8 @@ describe("DynamicFormIonicComponent test suite", () => {
             new DynamicSliderModel({id: "slider"}),
             new DynamicSwitchModel({id: "switch"}),
             new DynamicTextAreaModel({id: "textarea"}),
-            new DynamicTimePickerModel({id: "timepicker"})
+            new DynamicTimePickerModel({id: "timepicker"}),
+            new DynamicFileUploadModel({id: "fileupload" })
         ],
         testModel = formModel[7] as DynamicInputModel,
         formGroup: FormGroup,

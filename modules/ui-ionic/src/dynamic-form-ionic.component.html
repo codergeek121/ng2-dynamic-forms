@@ -157,6 +157,12 @@
                     [ngClass]="model.cls.element.control"
                     (ionChange)="onValueChange($event)"></ion-toggle>
 
+        <ion-toggle *ngSwitchCase="11"
+                    [disabled]="model.disabled"
+                    [dynamicId]="bindId && model.id"
+                    [formControlName]="model.id"
+                    [ngClass]="model.cls.element.control"
+                    (ionChange)="onValueChange($event)"></ion-toggle>
     </ion-item>
 
 
